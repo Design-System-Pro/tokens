@@ -18,10 +18,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Transform
-        uses: Design-System-Pro/transform-action@v1.0.1
+        uses: Design-System-Pro/transform-action@v1.0.3
         with:
           output-path: "packages/alpha"
-          token-path: ""
 
       - name: Release
         uses: Design-System-Pro/release-action@v1.0.1
