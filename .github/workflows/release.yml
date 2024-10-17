@@ -29,8 +29,7 @@ jobs:
           tokens-path: "./"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.0.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: Design-System-Pro/release-action@v1.0.7
         with:
           dist-dir: "./packages/alpha"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
