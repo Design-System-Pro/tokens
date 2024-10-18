@@ -28,11 +28,6 @@ jobs:
           output-path: "./packages/alpha"
           tokens-path: "./tokens"
 
-      - name: 📄 Log variables.css content
-        run: |
-          echo "Content of variables.css:"
-          cat ./packages/alpha/variables.css
-
       - name: 🚀 Release
         uses: Design-System-Pro/release-action@v1.0.8
         with:
