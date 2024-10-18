@@ -23,7 +23,7 @@ jobs:
           node-version: ">=20"
 
       - name: 🪄 Transform
-        uses: Design-System-Pro/transform-action@v1.1.0
+        uses: Design-System-Pro/transform-action@v1.1.1
         with:
           output-path: "./packages/alpha"
           tokens-path: "./tokens"
