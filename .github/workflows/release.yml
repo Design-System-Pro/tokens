@@ -1,4 +1,4 @@
-name: 🚀 Release
+name: 📦 Transform and Release
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  transform:
+  release:
     runs-on: ubuntu-22.04
 
     steps:
@@ -25,11 +25,11 @@ jobs:
       - name: 🪄 Transform
         uses: Design-System-Pro/transform-action@v1.1.1
         with:
-          output-path: "./packages/alpha"
+          output-path: "./dist"
           tokens-path: "./tokens"
 
       - name: 🚀 Release
         uses: Design-System-Pro/release-action@v1.0.8
         with:
-          dist-dir: "./packages/alpha"
+          dist-dir: "./dist"
           github-token: ${{ secrets.GITHUB_TOKEN }}
