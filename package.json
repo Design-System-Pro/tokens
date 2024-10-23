@@ -14,6 +14,10 @@
   "exports": {
     "./tokens.css": "./dist/variables.css"
   },
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": "^20"
+  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
