@@ -42,4 +42,4 @@ jobs:
         with:
           dist-dir: "./dist"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          release-branch: '{ "name": "next", "prerelease": true }'
+          release-branch: '{ name: "next", prerelease: true }'
