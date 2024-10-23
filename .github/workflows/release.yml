@@ -38,8 +38,9 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.1.0-next.1
+        uses: Design-System-Pro/release-action@v1.1.0-next.2
         with:
           dist-dir: "./dist"
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          node-auth-token: ${{ secrets.GITHUB_TOKEN }}
           release-branch: '"main", { name: "next", prerelease: true }'
