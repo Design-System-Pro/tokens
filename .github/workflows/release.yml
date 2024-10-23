@@ -21,6 +21,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ">=20"
+          cache: "pnpm"
+
+      - name: Install Dependencies
+        run: pnpm install
 
       - name: 🪄 Transform
         uses: Design-System-Pro/transform-action@v1.1.1
@@ -29,7 +33,6 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.0.8
-        with:
-          dist-dir: "./dist"
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm semantic-release
