@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  transform:
+  release:
     runs-on: ubuntu-22.04
 
     steps:
