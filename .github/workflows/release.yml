@@ -38,7 +38,8 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm semantic-release
+        uses: Design-System-Pro/release-action@v1.1.0-next.1
+        with:
+          dist-dir: "./dist"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          release-branch: '{ name: "next", prerelease: true}'
