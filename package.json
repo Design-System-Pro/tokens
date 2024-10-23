@@ -1,0 +1,17 @@
+{
+  "name": "@design-system-pro/tokens",
+  "version": "0.0.0",
+  "description": "Design Tokens",
+  "author": "tomasfrancisco",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./tokens.css": "./dist/variables.css"
+  }
+}
