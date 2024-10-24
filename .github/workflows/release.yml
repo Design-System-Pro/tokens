@@ -28,9 +28,6 @@ jobs:
           node-version-file: "package.json"
           cache: "pnpm"
 
-      - name: Install Dependencies
-        run: pnpm install
-
       - name: 🪄 Transform
         uses: Design-System-Pro/transform-action@v1.1.1
         with:
