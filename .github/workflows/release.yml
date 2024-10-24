@@ -25,7 +25,7 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.1.0-next.4
+        uses: Design-System-Pro/release-action@v1.0.0
         with:
           dist-dir: "./dist"
           registry-url: "https://npm.pkg.github.com"
