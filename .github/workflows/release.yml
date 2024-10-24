@@ -35,7 +35,7 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.1.0-next.2
+        uses: Design-System-Pro/release-action@v1.1.0-next.3
         with:
           dist-dir: "./dist"
           github-token: ${{ secrets.GITHUB_TOKEN }}
