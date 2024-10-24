@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - next
   pull_request:
     branches:
       - main
@@ -17,11 +18,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ">=20"
-
       - name: 🪄 Transform
         uses: Design-System-Pro/transform-action@v1.1.1
         with:
@@ -29,7 +25,10 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.0.8
+        uses: Design-System-Pro/release-action@v1.0.0
         with:
           dist-dir: "./dist"
+          registry-url: "https://npm.pkg.github.com"
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          node-auth-token: ${{ secrets.GITHUB_TOKEN }}
+          release-branch: '"main", { name: "next", prerelease: true }'

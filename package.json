@@ -12,6 +12,6 @@
     "access": "public"
   },
   "exports": {
-    "./tokens.css": "./dist/variables.css"
+    "./tokens.css": "./dist/tokens.css"
   }
 }
