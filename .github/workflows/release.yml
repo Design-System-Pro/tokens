@@ -18,15 +18,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           registry-url: "https://npm.pkg.github.com"
-          node-version-file: "package.json"
-          cache: "pnpm"
 
       - name: 🪄 Transform
         uses: Design-System-Pro/transform-action@v1.1.1
@@ -35,9 +30,10 @@ jobs:
           tokens-path: "./tokens"
 
       - name: 🚀 Release
-        uses: Design-System-Pro/release-action@v1.1.0-next.3
+        uses: Design-System-Pro/release-action@v1.1.0-next.4
         with:
           dist-dir: "./dist"
+          registry-url: "https://npm.pkg.github.com"
           github-token: ${{ secrets.GITHUB_TOKEN }}
           node-auth-token: ${{ secrets.GITHUB_TOKEN }}
           release-branch: '"main", { name: "next", prerelease: true }'

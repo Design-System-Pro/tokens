@@ -13,6 +13,5 @@
   },
   "exports": {
     "./tokens.css": "./dist/tokens.css"
-  },
-  "packageManager": "pnpm@9.5.0"
+  }
 }
